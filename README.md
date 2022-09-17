@@ -18,7 +18,7 @@ Colletion or Reproduction of the main image-based PM2.5 estimation algorithms. S
 > Gu K, Liu H, Xia Z, et al. PM₂. ₅ Monitoring: Use Information Abundance Measurement and Wide and Deep Learning[J]. IEEE Transactions on Neural Networks and Learning Systems, 2021, 32(10): 4278-4290.
 
 - no officail code, or if you have found the official source code, please tell us.
-- our reproduction: PyTorch. [xxx](xxx)
+- our reproduction: PyTorch. [IAWD](https://github.com/qing-xue/Image-based-PM2.5-Estimation/tree/main/IAWD)
 - other reproduction: PyTorch. [https://git.acwing.com/ldbxd/environment](https://git.acwing.com/ldbxd/environment)
 
 ## 2022 MIFF
