@@ -27,3 +27,13 @@ Colletion or Reproduction of the main image-based PM2.5 estimation algorithms. S
 - no officail code, or if you have found the official source code, please tell us.
 - our reproduction: PyTorch. [xxx](xxx)
 - other reproduction: PyTorch. [https://github.com/Bobcolder/environment/blob/main/utils/svr.py](https://github.com/Bobcolder/environment/blob/main/utils/svr.py)
+
+## Datasets & Trained Models
+
+- Beijing Dataset. [link](xxx)
+- Heshan Dataset. [link](xxx)
+
+|  Models   | Beijing Dataset                                                                 |  Heshan Dataset  |
+|  21-IAWD  | [PM_IAWD_Beijing.pk](https://pan.baidu.com/s/1bi1I89zYGOk9l-dvVW3wvg?pwd=7tyc)  |                  |
+|  22-MIFF  | [xxx]()                                                                         |                  |
+ 
