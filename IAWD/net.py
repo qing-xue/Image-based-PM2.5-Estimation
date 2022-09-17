@@ -11,19 +11,19 @@ from torch import nn
 
 
 class IAWD(torch.nn.Module):
+
     def __init__(self):
         super(IAWD, self).__init__()
         self.deep = BPNNModel_DNN()
         self.wide = BPNNModel_WNN()
         self.layer = nn.Linear(1, 1, bias=True)
-        self.bn1 = nn.BatchNorm1d(num_features=6, affine=False)
-        self.sig1 = nn.Sigmoid()
+        self.bn = nn.BatchNorm1d(num_features=6, affine=False)
 
     def forward(self, x):
-        x = self.bn1(x)                     # simulate the normalization of input data
+        x = self.bn(x)                     # simulate the normalization of input data
         x1 = self.deep(x)
         x2 = self.wide(x)
-        y = self.sig1(0.5 * x1 + 0.5 * x2)  # Equation (17)
+        y = 0.5 * x1 + 0.5 * x2            # Equation (17)
         y = self.layer(y)
         return y
 
@@ -34,6 +34,7 @@ class BPNNModel_DNN(torch.nn.Module):
     Page 7: Three hidden layers (essentially three fully connected layers) with two hidden neurons in each layer
     in the deep neural network.
     """
+
     def __init__(self):
         super(BPNNModel_DNN, self).__init__()
         self.layer1 = nn.Sequential(nn.Linear(6, 2), nn.Sigmoid())

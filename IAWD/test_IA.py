@@ -10,3 +10,4 @@ im = im.resize((width, height))  # PIL 先 Resize 减少计算量
 info = IA_Features().getInfo(im)
 print("Extraction of IA Features: ")
 print(info)
+
