@@ -5,6 +5,9 @@ Python 的模块就是天然的单例模式，因为模块在第一次导入时�
 import torch
 import torchvision.transforms as tfs
 from PIL import Image
+
+import os
+from config import  PM_PATH
 from common.FFANet.FFA import *
 
 
@@ -14,7 +17,7 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 class FFANet_Adapter(object):
 
     def __init__(self):
-        model_dir = f'../common/FFANet/ots_train_ffa_3_19.pk'
+        model_dir = os.path.join(PM_PATH, f'common/FFANet/ots_train_ffa_3_19.pk')
         ckp = torch.load(model_dir, map_location=DEVICE)
         net = FFA(gps=3, blocks=19)
         net = nn.DataParallel(net)
