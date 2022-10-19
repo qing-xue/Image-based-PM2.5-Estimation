@@ -2,6 +2,8 @@
 *.pth
 *.zip
 *.npy
+*.csv
+*.joblib
 .idea/
 
 # Byte-compiled / optimized / DLL files
