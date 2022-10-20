@@ -9,7 +9,6 @@ from sklearn.svm import LinearSVC
 
 rng = np.random.RandomState(2021)
 
-# TODO: 删除值为默认的行，无 0.5 数据
 root_train = './df_info_train_miff.csv'
 root_valid = './df_info_valid_miff.csv'
 
@@ -70,8 +69,8 @@ dump(grid.best_estimator_, 'miff.joblib')
 
 # [out] --------------------------------------------------------
 bst = grid.best_estimator_
-valid_features = train_features
-df_valid = df_train
+# valid_features = train_features
+# df_valid = df_train
 
 preds = bst.predict(valid_features) * SCALE + PM_MIN
 list_pred = list(preds)
@@ -85,6 +84,6 @@ df_pred['mae'] = mae
 bestMAE = np.round(mae.mean(), 3)
 print('MAE:', bestMAE)
 print('r2_score:', r2_score(df_pred['pred'], df_pred['PM2.5']))
-# df_pred.to_csv(f'PM2.5_Pred_MAE:{bestMAE}_{str(grid.best_params_)}.csv', sep=',', index=False)
+df_pred.to_csv("miff_out.csv", sep=',', index=False)
 
 
