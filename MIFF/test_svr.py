@@ -27,7 +27,7 @@ SERIES_MAX = np.asarray([0.993714, 0.432661, 1.019228])  # 顺序：depth_sim, r
 SERIES_MIN = np.asarray([0.859622, 0.039976, 0.967000])  # 顺序：depth_sim, residual, rate
 
 # Image 目录-----------------------------------
-test_imgs = r'D:\workplace\dataset\V-picture'
+test_imgs = r'D:\workplace\dataset\V-picture-2'
 img_dir = test_imgs + '/'
 output_dir = img_dir
 print("pred_dir:", output_dir)

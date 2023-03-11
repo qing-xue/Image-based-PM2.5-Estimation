@@ -3,6 +3,7 @@
 *.zip
 *.npy
 *.csv
+*.xlsx
 *.joblib
 .idea/
 

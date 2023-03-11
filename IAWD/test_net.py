@@ -44,7 +44,7 @@ net.load_state_dict(state_dict, strict=True)
 net.eval()
 
 # 数据：图片所在文件夹 ---------------------------------------------
-test_imgs = r'D:\workplace\dataset\V-picture'
+test_imgs = r'D:\workplace\dataset\V-picture-2'
 img_dir = test_imgs + '/'
 output_dir = img_dir
 print("pred_dir:", output_dir)
