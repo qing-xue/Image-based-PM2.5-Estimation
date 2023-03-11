@@ -33,8 +33,11 @@ Colletion or Reproduction of the main image-based PM2.5 estimation algorithms. S
 - Beijing Dataset. [link](xxx)
 - Heshan Dataset. [link](xxx)
 
-|  Models   | Beijing Dataset                                                                 |  Heshan Dataset  |
-|  ----     | ----                                                                            | ----             |
-|  21-IAWD  | [PM_IAWD_Beijing.pk](https://pan.baidu.com/s/1bi1I89zYGOk9l-dvVW3wvg?pwd=7tyc)  |                  |
-|  22-MIFF  | [MIFF & xx models](https://pan.baidu.com/s/1bVk5pFqu9Ei0LLgQy4ZciQ?pwd=jaes)    |                  |
+|  Models      | Beijing Dataset                                                                 |  Heshan Dataset  |
+|  ----        | ----                                                                            | ----             |
+|  21-IAWD     | [PM_IAWD_Beijing.pk](https://pan.baidu.com/s/1bi1I89zYGOk9l-dvVW3wvg?pwd=7tyc)  |                  |
+|  22-MIFF     | [MIFF & xx models](https://pan.baidu.com/s/1bVk5pFqu9Ei0LLgQy4ZciQ?pwd=jaes)    |                  |
+|  ResNet18    | [ResNet18.pk](https://pan.baidu.com/s/1RxXbH3XSji7MZEKttt_fgQ?pwd=10tz)         |                  |
+|  MobileNetV2 | [MobileNetV2.pk](https://pan.baidu.com/s/1GJvYHuAMVPUlYdS0pwsbxA?pwd=ooit)      |                  |
+
  
