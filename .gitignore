@@ -6,6 +6,7 @@
 *.xlsx
 *.joblib
 .idea/
+DualNet/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
