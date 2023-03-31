@@ -9,7 +9,7 @@ from sklearn.svm import LinearSVC
 
 rng = np.random.RandomState(2021)
 
-root_train = './df_info_train_miff.csv'
+root_train = 'exp/df_info_train_miff_ratio_15.csv'
 root_valid = './df_info_valid_miff.csv'
 
 features = ['depth_sim', 'residual', 'rate']
@@ -34,7 +34,7 @@ valid_features, valid_label = df_valid[features].values, df_valid['PM2.5'].value
 train_val_features = np.concatenate((train_features, valid_features), axis=0)
 train_val_labels = np.concatenate((train_label, valid_label), axis=0)
 
-test_fold = np.zeros(train_val_features.shape[0])  # 将所有index初始化为0,0表示第一轮的验证集
+test_fold = np.zeros(train_val_features.shape[0])  # 将所有index初始化为0, 0表示第一轮的验证集
 test_fold[:train_features.shape[0]] = -1           # 将训练集对应的index设为-1，表示永远不划分到验证集中
 ps = PredefinedSplit(test_fold=test_fold)
 # backup
@@ -64,7 +64,7 @@ print('best_estimator:', grid.best_estimator_)
 print('best_index:', grid.best_index_)
 
 from joblib import dump, load
-dump(grid.best_estimator_, 'miff.joblib')
+dump(grid.best_estimator_, 'exp/miff.joblib')
 # clf = load('filename.joblib')
 
 # [out] --------------------------------------------------------
@@ -84,6 +84,6 @@ df_pred['mae'] = mae
 bestMAE = np.round(mae.mean(), 3)
 print('MAE:', bestMAE)
 print('r2_score:', r2_score(df_pred['pred'], df_pred['PM2.5']))
-df_pred.to_csv("miff_out.csv", sep=',', index=False)
+df_pred.to_csv("exp/miff_out.csv", sep=',', index=False)
 
 
