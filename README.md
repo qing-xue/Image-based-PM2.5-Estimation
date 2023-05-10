@@ -4,7 +4,9 @@ Colletion or Reproduction of the main image-based PM2.5 estimation algorithms. S
 该仓库收集或复现了一些主要的基于图像估计 PM2.5 浓度的方法，其中一些暂时未找到官方源码。如果您找到了某个算法的源码，欢迎告诉我们！
 
 ## Dependencies:
-Python 3.8
+Python 3.8  
+opencv-python 4.5.5.64  
+openpyxl  
 
 ## 2018 PPPC
 > Gu K, Qiao J, Li X. Highly efficient picture-based prediction of PM2. 5 concentration[J]. IEEE Transactions on Industrial Electronics, 2018, 66(4): 3176-3184.
