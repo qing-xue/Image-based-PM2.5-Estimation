@@ -18,9 +18,9 @@ class IA_Features():
         info = list()
         for i in self.w:
             dc2 = self._process_img(np.array(dc), i)  # For show: Image.fromarray(x).convert('RGB')
-            H1 = self._calc_array(dc2)[0]
+            H1 = self._calc_array(dc2)
             sm2 = self._process_img(np.array(sm), i)
-            H2 = self._calc_array(sm2)[0]
+            H2 = self._calc_array(sm2)
             info.append(H1)
             info.append(H2)
 
@@ -34,7 +34,7 @@ class IA_Features():
         hist = cv2.calcHist([img], [0], None, [256], [0, 255])
         total_pixel = img.shape[0] * img.shape[1]
 
-        for item in hist:
+        for item in hist.flatten():
             probability = item / total_pixel
             if probability == 0:
                 en = 0
