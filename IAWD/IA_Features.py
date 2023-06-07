@@ -1,5 +1,5 @@
 import numpy as np
-from cv2 import cv2
+import cv2
 from PIL import Image
 
 import utils

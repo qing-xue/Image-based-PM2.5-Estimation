@@ -4,6 +4,9 @@ from joblib import load
 import numpy as np
 import pandas as pd
 
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+
 from svr_prepare import f1f2f3
 
 
@@ -27,7 +30,7 @@ SERIES_MAX = np.asarray([0.993714, 0.432661, 1.019228])  # 顺序：depth_sim, r
 SERIES_MIN = np.asarray([0.859622, 0.039976, 0.967000])  # 顺序：depth_sim, residual, rate
 
 # Image 目录-----------------------------------
-test_imgs = r'D:\workplace\dataset\V-picture-2'
+test_imgs = r'D:\workplace\dataset\Various-Pic\V-picture-3\imgs'
 img_dir = test_imgs + '/'
 output_dir = img_dir
 print("pred_dir:", output_dir)
